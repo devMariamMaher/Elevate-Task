@@ -2,6 +2,8 @@
 
 ## Project Description
 
+[Live Demo](https://elevate-task-gamma.vercel.app/home)
+
 This is a fully responsive e-commerce website that dynamically fetches and displays products from the Fake Store API. Built with Angular and styled using Tailwind CSS, it offers a smooth browsing experience with intuitive navigation and dynamic routing for seamless page transitions.
 
 ## Technologies Used
