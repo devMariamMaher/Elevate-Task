@@ -1,0 +1,32 @@
+@if(productDetails){
+  <section>
+    @if(isLoading){
+      <div class="loadingLayer hidden">
+        <div class="dots"></div>
+      </div>
+    }
+
+    @if (!isLoading) {
+      <div class="container">
+        <div class="productDetails">
+          <div>
+            <img class="h-[380px] mx-auto object-contain" [src]="productDetails.image" [alt]="productDetails.title">
+          </div>
+
+          <div class="productData grid grid-cols-1 gap-y-8 md:gap-0 md:grid-cols-12 mt-8">
+            <div class="col-span-8 order-2 md:-order-none">
+              <h2 class="text-[28px] font-semibold mb-3">{{productDetails.title}}</h2>
+              <p class="text-lg">{{productDetails.description}}</p>
+            </div>
+
+            <div class="col-span-4 order-1 flex justify-between items-center md:block md:justify-self-center md:-order-none">
+              <h3 class="text-xl font-medium mb-2">Price: <span class="text-[var(--main-color)]">{{productDetails.price | currency : 'EGP'}}</span></h3>
+              <h3 class="text-lg font-medium mb-2">Category: {{productDetails.category}}</h3>
+              <h3 class="text-lg font-medium">Rating: {{productDetails.rating?.rate}} <span class="text-yellow-300"><i class="fa-solid fa-star "></i></span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </section>
+}
