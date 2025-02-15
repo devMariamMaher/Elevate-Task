@@ -4,10 +4,11 @@
 
 [Live Demo](https://elevate-task-gamma.vercel.app/home)
 
-This is a fully responsive e-commerce website that dynamically fetches and displays products from the Fake Store API. Built with Angular and styled using Tailwind CSS, it offers a smooth browsing experience with intuitive navigation and dynamic routing for seamless page transitions.
+This is a fully responsive e-commerce website that dynamically fetches and displays products from the Fake Store API. Built with Angular 19 and styled using Tailwind CSS, it offers a smooth browsing experience with intuitive navigation and dynamic routing for seamless page transitions.
 
 ## Technologies Used
 
+- Angular 19
 - HTML, SCSS, TypeScript
 - Tailwind CSS (for styling)
 - Fake Store API (for product data)
@@ -20,7 +21,11 @@ This is a fully responsive e-commerce website that dynamically fetches and displ
 
 Before running the project, ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (optional, if using a local development server)
+- [Node.js](https://nodejs.org/) (latest LTS version recommended)
+- [Angular CLI](https://angular.io/cli) (ensure it's updated to support Angular 19):
+  ```sh
+  npm install -g @angular/cli
+  ```
 - A modern web browser (Google Chrome, Firefox, etc.)
 
 ### Steps to Run
@@ -33,12 +38,19 @@ Before running the project, ensure you have the following installed:
    ```sh
    cd your-repo-name
    ```
-3. Open the `index.html` file in your browser manually, or start a local server using:
+3. Install dependencies:
    ```sh
-   npx live-server
+   npm i
    ```
-   (If `live-server` is not installed, you can install it globally using `npm install -g live-server`.)
-4. The e-commerce website should now be running locally in your browser.
+4. Start the development server:
+   ```sh
+   ng s --o
+   ```
+5. Open your browser and navigate to:
+   ```
+   http://localhost:4200/
+   ```
+   The e-commerce website should now be running locally in your browser.
 
 ## Features
 
@@ -46,11 +58,10 @@ Before running the project, ensure you have the following installed:
 - Displays product listings and details
 - Fully responsive design with Tailwind CSS
 - Routing for seamless navigation between pages
-- Simple shopping cart functionality
 
 ## Future Improvements
 
-- Add user authentication
+- Add user authentication and cart
 - Implement a checkout system
 - Enhance UI/UX with animations and better styling
 
