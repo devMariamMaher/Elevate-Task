@@ -1,75 +1,95 @@
-# E-Commerce Website
+# 🛍️ E-Commerce Website
 
-## Project Description
+## 📄 Project Description
 
-[Live Demo](https://elevate-task-gamma.vercel.app/)
+This is a fully responsive **e-commerce website** built with **Angular 19** and **Tailwind CSS**, fetching real product data from the **Fake Store API**. The site features intuitive navigation, smooth dynamic routing, and a clean, modern UI with both **light and dark modes**. Users can browse, filter, and explore product listings with ease on any device.
 
-This is a fully responsive e-commerce website that dynamically fetches and displays products from the Fake Store API. Built with Angular 19 and styled using Tailwind CSS, it offers a smooth browsing experience with intuitive navigation and dynamic routing for seamless page transitions.
+---
 
-## Technologies Used
+## 🔗 Live Demo: 
+https://elevate-task-gamma.vercel.app/home
 
-- Angular 19
-- HTML, SCSS, TypeScript
-- Tailwind CSS (for styling)
-- Fake Store API (for product data)
-- Routing for navigation
-- Responsive design for mobile and desktop views
+📽️ **Video Demo**: [Watch on Google Drive](https://drive.google.com/file/d/1HnTdcYzHtvBFFs82MoIa7RyQRBeo3Sam/view?usp=sharing)
 
-## How to Run the Project Locally
+> (Optional) Add your live deployment link here if you host the app online.
 
-### Prerequisites
+---
 
-Before running the project, ensure you have the following installed:
+## 🛠 Technologies Used
+
+- **Angular 19**
+- **HTML, SCSS, TypeScript**
+- **Tailwind CSS** (for modern, utility-first styling)
+- **Fake Store API** (for product data)
+- **Angular Routing** (for seamless navigation)
+- **Responsive Design** (optimized for mobile & desktop)
+- **Dark Mode Support** (with toggle switch)
+
+---
+
+## 🚀 Features
+
+- ✅ Dynamic product fetching from Fake Store API
+- ✅ Full products page with grid layout
+- ✅ Product detail page with detailed view
+- ✅ **Dark Mode toggle** for enhanced accessibility
+- ✅ **Responsive design** for all screen sizes
+- ✅ **Filter by name (ascending/descending)**
+- ✅ **Filter by price range**
+- ✅ Clean UI with Tailwind CSS
+- ✅ Seamless page transitions with Angular routing
+
+---
+
+## 🔧 How to Run the Project Locally
+
+### ✅ Prerequisites
+
+Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (latest LTS version recommended)
-- [Angular CLI](https://angular.io/cli) (ensure it's updated to support Angular 19):
-  ```sh
+- [Angular CLI](https://angular.io/cli) (compatible with Angular 19)
+  ```bash
   npm install -g @angular/cli
   ```
-- A modern web browser (Google Chrome, Firefox, etc.)
+- A modern web browser (Chrome, Firefox, Edge, etc.)
 
-### Steps to Run
+---
 
-1. Clone the repository to your local machine:
-   ```sh
+### ▶️ Steps to Run
+
+1. **Clone the repository**:
+   ```bash
    git clone https://github.com/your-username/your-repo-name.git
    ```
-2. Navigate to the project directory:
-   ```sh
+
+2. **Navigate to the project directory**:
+   ```bash
    cd your-repo-name
    ```
-3. Install dependencies:
-   ```sh
-   npm i
+
+3. **Install dependencies**:
+   ```bash
+   npm install
    ```
-4. Start the development server:
-   ```sh
-   ng s --o
+
+4. **Start the development server**:
+   ```bash
+   ng serve --open
    ```
-5. Open your browser and navigate to:
+
+5. **View the app** in your browser at:
    ```
    http://localhost:4200/
    ```
-   The e-commerce website should now be running locally in your browser.
 
-## Features
+---
 
-- Fetches product data from the Fake Store API
-- Displays product listings and details
-- Fully responsive design with Tailwind CSS
-- Routing for seamless navigation between pages
+## 🚧 Future Improvements
 
-## Future Improvements
-
-- Add user authentication and cart
-- Implement a checkout system
-- Enhance UI/UX with animations and better styling
-
-## License
-
-This project is open-source and available under the MIT License.
-
-## Contact
-
-For any questions or contributions, feel free to reach out via GitHub Issues or pull requests.
-
+- 🛒 Add cart functionality
+- 🔐 Implement user authentication & protected routes
+- 💳 Add a checkout and payment system
+- 💅 Improve UX with animations and transitions
+- 🔍 Add advanced filtering (category, rating, availability)
+- 📦 Connect to a real e-commerce backend or CMS
