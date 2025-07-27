@@ -7,7 +7,7 @@ This is a fully responsive **e-commerce website** built with **Angular 19** and 
 ---
 
 ## 🔗 Live Demo: 
-https://elevate-task-gamma.vercel.app/home
+https://job-fair-project.vercel.app/home
 
 📽️ **Video Demo**: [Watch on Google Drive](https://drive.google.com/file/d/1HnTdcYzHtvBFFs82MoIa7RyQRBeo3Sam/view?usp=sharing)
 
