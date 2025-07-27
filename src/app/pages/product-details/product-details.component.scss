@@ -1,0 +1,11 @@
+.star-rating::after {
+  content: "\f005 \f005 \f005 \f005 \f005";
+
+  font-family: "Font Awesome 6 Free";
+
+  --rating-percent: calc(attr(data-rating type(<number>), 0) / 5 * 100%);
+
+  background: linear-gradient(90deg, #eab308 var(--rating-percent), grey var(--rating-percent));
+  color: transparent;
+  background-clip: text;
+}

@@ -1,0 +1,42 @@
+<section class="mt-20">
+  <img class="w-full h-[60vh] md:h-[80vh] object-cover" src="./images/fashion-hero.jpg" alt="">
+</section>
+
+@if(allProducts != null){
+  <section class="py-14 dark:bg-gray-900 dark:text-white">
+    <div class="container">
+      <h1 class="sectionTitle mb-10">Our Products:</h1>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-6 mb-10">
+        <div class="relative w-full sm:w-1/2 lg:w-1/3">
+          <input [(ngModel)]="searchValue" type="text" class="w-full ps-4 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none shadow-sm dark:bg-gray-800 dark:text-white" placeholder="Search for a product...">
+        </div>
+
+        <div class="w-full sm:w-auto">
+          <select [(ngModel)]="filterValue" class="w-full sm:w-auto px-4 py-2 rounded-full border-2 border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none shadow-sm text-gray-700 dark:bg-gray-800 dark:text-white">
+            <option value="Sort by">Sort by</option>
+            <option value="Name A-Z">Name A-Z</option>
+            <option value="Name Z-A">Name Z-A</option>
+            <option value="Price Low to High">Price Low to High</option>
+            <option value="Price High to Low">Price High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+        @for (product of allProducts | search: searchValue | filter: filterValue; track product.id) {
+          <div class="product border-[1px] border-slate-200 dark:border-gray-700 p-4 cursor-pointer rounded-xl shadow-sm dark:bg-gray-800" [routerLink]="['/product-details', product.id]">
+            <div class="productImage">
+              <img [src]="product.image" class="h-[220px] object-contain block mx-auto" [alt]="product.title">
+            </div>
+
+            <div class="productInfo mt-4 text-center">
+              <h2 class="mb-2 text-sm font-medium dark:text-white">{{product.title.split(' ').slice(0, 3).join(' ')}}</h2>
+              <h3 class="font-semibold text-blue-600 dark:text-blue-400">{{product.price | currency: 'EGP'}}</h3>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+}

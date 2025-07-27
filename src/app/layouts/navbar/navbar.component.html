@@ -1,10 +1,43 @@
-<nav class="bg-slate-50 sticky top-0 left-0 right-0">
+<nav class="bg-white dark:bg-gray-900 fixed z-50 top-0 left-0 right-0 shadow-sm border-b border-gray-200 dark:border-gray-700 transition-colors py-2">
   <div class="container">
-    <div class="py-4">
-      <a class="flex items-center gap-3" routerLink="home">
-        <img src="./images/site-icon.jpg" class="w-12" alt="">
-        <span class="text-2xl text-[var(--main-color)] font-semibold">TrendyGo</span>
+    <div class="flex justify-center sm:justify-between items-center py-4 flex-wrap gap-3">
+
+      <!-- Logo -->
+      <a routerLink="home" class="text-2xl font-bold text-[--main-color] dark:text-blue-400">
+        ShopSmart
       </a>
+
+      <!-- Navigation Links -->
+      <ul class="flex gap-6 items-center">
+        <li>
+          <a
+            routerLink="home"
+            routerLinkActive="active"
+            class="text-gray-600 hover:text-[--main-color] dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 transition"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="products"
+            routerLinkActive="active"
+            class="text-gray-600 hover:text-[--main-color] dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 transition"
+          >
+            Products
+          </a>
+        </li>
+
+        <!-- Theme Toggle Button -->
+        <li>
+          <button
+            (click)="toggleTheme()"
+            class="text-sm px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          >
+            <i [class]="!isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun'"></i>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

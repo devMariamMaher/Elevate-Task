@@ -12,14 +12,13 @@ import { CurrencyPipe } from '@angular/common';
 })
 export class ProductDetailsComponent implements OnInit {
   productID!:string;
-  productDetails:IProduct = {} as IProduct;
-  isLoading:boolean = false
+  productDetails:IProduct | null = {} as IProduct;
+  relatedProducts!:IProduct[] | null;
 
   private _ActivatedRoute = inject(ActivatedRoute)
   private _ProductsService = inject(ProductsService)
 
   ngOnInit(): void {
-    this.isLoading = true;
     this._ActivatedRoute.paramMap.subscribe({
       next: (param)=>{
         this.productID = param.get('pId')!;
@@ -29,19 +28,7 @@ export class ProductDetailsComponent implements OnInit {
     this._ProductsService.getSpecificProduct(this.productID).subscribe({
       next: (res)=>{
         this.productDetails = res;
-        console.log(this.productDetails);
-
-        setTimeout(()=>{
-          this.isLoading = false;
-        }, 1000)
       },
-      error: (err)=>{
-        console.log(err);
-
-        setTimeout(()=>{
-          this.isLoading = false;
-        }, 1000)
-      }
     })
   }
 }
